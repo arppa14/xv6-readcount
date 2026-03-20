@@ -7,6 +7,8 @@
 #include "mmu.h"
 #include "proc.h"
 
+extern int readcount;
+
 int
 sys_fork(void)
 {
@@ -75,6 +77,12 @@ sys_sleep(void)
   }
   release(&tickslock);
   return 0;
+}
+
+int
+sys_getreadcount(void)
+{
+  return readcount;
 }
 
 // return how many clock tick interrupts have occurred

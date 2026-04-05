@@ -1,3 +1,4 @@
+/ORIGINAL readme me, my is under this one/
 NOTE: we have stopped maintaining the x86 version of xv6, and switched
 our efforts to the RISC-V version
 (https://github.com/mit-pdos/xv6-riscv.git)
@@ -49,3 +50,20 @@ will need to install a cross-compiler gcc suite capable of producing
 x86 ELF binaries (see https://pdos.csail.mit.edu/6.828/).
 Then run "make TOOLPREFIX=i386-jos-elf-". Now install the QEMU PC
 simulator and run "make qemu".
+
+README by me:
+All the changes made and these are githubs auto describes about the changes made for the files, because I had to add the changes afterwards to git eventhough I made the changes in ubuntu. When I was pushing the files to git from ubu the changes were not in files anymore.:
+Makefiel
+Remove -Werror from CFLAGS in Makefile
+syscall.c
+Add sys_getreadcount to syscall table
+syscall.h
+Add SYS_getreadcount definition to syscall.h
+sysfile.c
+Add readcount increment in sys_read function
+sysproc.c
+Add sys_getreadcount function
+user.h
+Add getreadcount function declaration in user.h
+usys.S
+Add getreadcount system call
